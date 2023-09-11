@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --color-header-footer: #000;
+    --color-icons: #000;
+    --color-all: #FFA500; /*FFA500 - CC7722*/
+    --color-accordion-header: #333333;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    ), url('../img/fondo-body.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+h1{font-size: 2em};
+h2{font-size: 1em};
+img{
+    width: auto;
+    height: auto;
+}
+
+.d-item{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.d-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.h1-slider{
+    font-size: 4.3em;
+    margin-top: 2.5em;
+}
+
+.p-slider{
+    margin-top: 50px;
+    font-size: 1.7em;
+}
+
+/* seccion quienes somos*/
+.div-texto{
+    padding: 40px;
+    text-align: center;
+}
+
+.div-texto h1{
+    color: var(--color-all);
+    text-transform: uppercase;
+}
+
+.div-texto h2{
+    color: #fff;
+    font-family: "Caprasimo";
+}
+
+.sobre-nos{
+    position: relative;
+    z-index: 1;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #000;
+    color: #fff;
+    border-top: 2px solid var(--color-all);
+    border-bottom: 2px solid var(--color-all);
+}
+
+.info{
+    margin: 0 15%;
+    text-align: justify;
+    font-weight: 700;
+}
+
+/* Para el accordion */
+.contenedor{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contenedor .heading{
+    text-align: center;
+    font-size: 3em;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.contenedor .accordion-wrapper{
+    padding: 0 200px; 
+}
+
+.contenedor .accordion{
+    margin-bottom: 20px;
+}
+
+.contenedor .accordion.active .accordion-heading{
+    background: var(--color-all);
+    color: #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.contenedor .accordion.active .accordion-heading i{
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+    color: #000;
+}
+
+.contenedor .accordion.active .accordion-content{
+    display: block;
+}
+
+.contenedor .accordion-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--color-accordion-header);
+    color:#fff;
+    border: 2px solid var(--color-all);
+    border-radius: 10px;
+    cursor: pointer;
+}   
+
+.contenedor .accordion-heading h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+.contenedor .accordion-heading i{
+    color: #fff;
+    margin: 0;
+}
+
+.contenedor .accordion-content{
+    padding: 20px;
+    font-size: 17px;
+    border: 2px solid var(--color-all); border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--color-accordion-header);
+    color: #fff;
+    animation: animate 0.2s linear backwards;
+    transform-origin: top;
+    display: none;
+}
+
+.contenedor .accordion-content-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedor .texto-contenedor{
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.contenedor .texto-contenedor > img{
+    max-width: 250px;
+    min-height: 250px;
+}
+
+.contenedor .texto-contenedor > button{
+    display: block;
+    margin-top: auto;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.contenedor .texto-contenedor > button:hover{
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 0px 6px 0px #000;
+}
+
+@keyframes animate {
+    0%{
+        transform: scaleY(0);
+    }
+}
+
+@media(max-width: 990px){
+    .d-item{
+        height: 75vh;
+    }
+
+    .h1-slider{
+        font-size: 3em;
+        margin-top: 25px;
+    }
+
+    .p-slider{
+        font-size: 1.3em;
+        /* display: none; */
+    }
+
+    .sobre-nos{
+        padding: 50px 15px;
+        font-size: 20px;
+    }
+
+    .contenedor .accordion-wrapper{
+        padding: 0 60px;
+    }
+
+    .contenedor .accordion-content-content{
+        display: block;
+    }
+
+    .contenedor .texto-contenedor>img {
+        max-width: 200px;
+        min-height: 200px;
+    }
+}

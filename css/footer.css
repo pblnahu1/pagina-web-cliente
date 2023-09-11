@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+:root {
+    --color-header-footer: #000;
+    --color-icons: #000;
+    --color-all: #FFA500;
+    /*FFA500 - CC7722*/
+}
+
+i{
+    font-size: 23px;
+    color: var(--color-icons);
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.div-footer{
+    text-align: center;
+    margin: 60px 20%;
+}
+
+.div-footer h4{
+    color: #ffffff;
+    margin: 50px;
+    font-size: 2.6em;
+    /* font-family: Caprasimo; */
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.button-contacto-footer{
+    text-decoration: none;
+    color: #000;
+    background-color: var(--color-all);
+    padding: 15px 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-contacto-footer:hover{
+    box-shadow: 0px 0px 15px 0px #ffc218;
+}
+
+.wpp_logo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    height: 4rem;
+    z-index: 99;
+    transition: all 0.4s ease-in-out;
+}
+
+.wpp_logo:hover{
+    transform: scale(1.1);
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-header-footer);
+    border-top: 2px solid var(--color-all);
+    z-index: 100;
+    padding: 30px 20%;
+}
+
+.container-footer i{
+    color: #fff;
+}
+
+.container-footer a{
+    text-decoration: none;
+    color: var(--color-all);
+}
+
+.div-links-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    width: 75%;
+}
+
+.link a:hover{
+    text-decoration: 1px underline #FFA500;
+}
+
+.logo-footer-mobile{
+    display: none;
+}
+
+.logo > img{
+    max-width: 100px;
+    min-height:100px;
+}
+
+.contacto-developer{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.contacto-developer span:hover{
+    text-decoration: 1px underline #FFA500; 
+}
+
+@media(max-width: 990px){
+    .container-footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .div-footer{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .div-links-footer{
+        display: block;
+    }
+
+    .link > i{
+        text-align: left;
+        margin: 0;
+    }
+
+    .link > a{
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+
+    .logo-footer-mobile{
+        display: block;
+    }
+}

@@ -1,0 +1,139 @@
+:root {
+    --color-header-footer: #000;
+    --color-icons: #000;
+    --color-all: #FFA500;
+    /*FFA500 - CC7722*/
+}
+
+header {
+    margin: 0;
+    padding: 13px 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-header-footer);
+    border-bottom: 2px solid var(--color-all);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    position: sticky;
+}
+
+.logo-header img {
+    max-width: 80px;
+    min-height: 80px;
+}
+
+#nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li>a {
+    font-size: 19px;
+    margin: 0 10px;
+    padding: 13px 20px;
+    text-decoration: none;
+    color: var(--color-all);
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+li>a:hover {
+    background-color: rgb(46, 46, 46);
+    border-radius: 25px;
+}
+
+.boton-contacto {
+    color: #000;
+    background-color: var(--color-all);
+    border-radius: 25px;
+    transition: all 0.1s ease-in-out;
+}
+
+.boton-contacto:hover {
+    background-color: var(--color-all);
+    transform: scale(1.04);
+}
+
+@media(max-width: 990px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 20px;
+    }
+
+    .logo-header img{
+        max-width: 60px;
+        min-height: 50px;
+    }
+
+    #nav {
+        display: none;
+        background-color: #000;
+        text-align: center;
+        width: 100%;
+        /* min-width: 300px; */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        border-bottom: 1px solid var(--color-all);
+        border-right: 0px;
+        border-left: 0px;
+        border-top: 0px;
+    }
+
+    #nav li {
+        flex-grow: 1;
+    }
+
+    #nav a {
+        display: block;
+        padding: 15px 0;
+        border-radius: 0px;
+        margin: 0;
+    }
+
+    li>a {
+        transition: none;
+    }
+
+    #nav.active {
+        display: block; 
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu-toggle>i {
+        font-size: 50px;
+        color: #fff;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .boton-contacto {
+        transition: none;
+        background-color: var(--color-header-footer);
+        color: #FFA500;
+    }
+
+    .boton-contacto:hover {
+        transform: none;
+        background-color: rgb(46, 46, 46);
+    }
+}

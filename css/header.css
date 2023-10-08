@@ -53,13 +53,13 @@ li>a {
 
 li>a:hover {
     background-color: rgb(46, 46, 46);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .boton-contacto {
     color: #000;
     background-color: var(--color-all);
-    border-radius: 25px;
+    border-radius: 15px;
     transition: all 0.1s ease-in-out;
 }
 
